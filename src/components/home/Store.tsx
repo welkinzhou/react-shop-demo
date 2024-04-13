@@ -44,6 +44,7 @@ const Store = () => {
             <a
               href="https://mall.jd.com/index-1000426590.html?from=pc"
               target="_blank"
+              rel="noreferrer"
               className="cursor-pointer py-[10px] px-[20px] text-[11px] text-white tracking-[3px] font-medium text-center uppercase bg-[#daa37f]"
             >
               E-Shop

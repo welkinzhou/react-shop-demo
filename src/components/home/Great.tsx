@@ -21,6 +21,7 @@ const Great = () => {
               <a
                 href="http://www.moa.gov.cn/xw/qg/202404/t20240407_6453074.htm"
                 target="_blank"
+                rel="noreferrer"
                 className="cursor-pointer py-[10px] px-[20px] text-[11px] text-white tracking-[3px] font-medium text-center uppercase bg-[#daa37f]"
               >
                 Learn more

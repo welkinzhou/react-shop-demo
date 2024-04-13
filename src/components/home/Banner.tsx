@@ -1,7 +1,14 @@
 import React from "react";
 import FixedBg from "../ui/FixedBg";
+import { useNavigate } from "react-router-dom";
 
-const banner = () => {
+const Banner = () => {
+  const navigate = useNavigate();
+
+  const handleShopClick = () => {
+    navigate("/shop");
+  };
+
   return (
     <FixedBg
       url="/src/assets/header-bg.jpg"
@@ -15,7 +22,10 @@ const banner = () => {
           <p className="text-[14px] text-white m-0 mb-[18px] animate-[opacity_3s]">
             Since 1892, Zhu Ku La, Bin Chuan
           </p>
-          <span className="cursor-pointer py-[10px] px-[20px] text-[11px] text-white tracking-[3px] font-medium text-center uppercase bg-[#daa37f] animate-[opacity_3s]">
+          <span
+            onClick={handleShopClick}
+            className="cursor-pointer py-[10px] px-[20px] text-[11px] text-white tracking-[3px] font-medium text-center uppercase bg-[#daa37f] animate-[opacity_3s]"
+          >
             SHOP
           </span>
         </div>
@@ -28,4 +38,4 @@ const banner = () => {
   );
 };
 
-export default banner;
+export default Banner;
