@@ -4,13 +4,16 @@ import { Badge } from "antd";
 import { useAppSelector } from "@/hooks/index";
 
 const TopBar = () => {
-  const count = useAppSelector((state) => state.cart.value);
+  const count = useAppSelector((state) =>
+    state.cart.good.reduce((acc, good) => acc + good.count, 0)
+  );
+  console.log(count);
   return (
     <div className="h-[55px] leading-[55px] bg-zinc-700 text-white relative z-20">
       <div className="w-4/6 mx-auto flex justify-between">
         <div className="text-[14px] font-light">欢迎选购</div>
         <div>
-          <Badge count={count} size="small">
+          <Badge count={count} size="small" showZero>
             <ShoppingCartOutlined
               style={{ fontSize: "26px", color: "white" }}
             />

@@ -3,7 +3,7 @@ import React from "react";
 import TopBar from "@/components/core/TopBar";
 
 import ProductGrid from "@/components/shop/ProductGrid";
-import data from "./mock";
+import data from "@/mock/products";
 
 const Shop = () => {
   return (
